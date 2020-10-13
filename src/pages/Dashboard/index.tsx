@@ -2,17 +2,15 @@ import React, { useRef } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import {
   Container,
-  HeaderContainer,
-  HeaderTextContainer,
   ContainerTitle,
   Form,
   BookContainer,
   BookContainerExtra,
 } from './styles';
-import logoImg from '../../assets/logo.svg';
 import bookCaseBackground from '../../assets/bookcaseBackground.svg';
 import booksBackground from '../../assets/booksBackground.svg';
 import bookExemple from '../../assets/bookExemple.png';
+import Navbar from '../../components/NavBar';
 
 const Dashboard: React.FC = () => {
   let distancia = 0;
@@ -73,16 +71,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <HeaderContainer>
-        <img src={logoImg} alt="Mylib Logo" />
-
-        <HeaderTextContainer>
-          <text style={{ color: '#6868ff', fontWeight: 'bold' }}>Livros</text>
-          <text>Adicionar</text>
-          <text>Categorias</text>
-          <text>Login</text>
-        </HeaderTextContainer>
-      </HeaderContainer>
+      <Navbar />
       <Container>
         <img className="books" src={booksBackground} alt="Books" />
         <ContainerTitle>
